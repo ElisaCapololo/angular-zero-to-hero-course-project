@@ -9,16 +9,45 @@
             <div class="movies-thumbnail">
                 <!--Now we are Biding the movies that from Typescript to html file-->
                 <div class="movie" *ngFor="let movie of trendingMovies">
-                    <div class="cover">
+                    <div class="cover" (click)="goToMovie('treding', movie.id)">
                         <img [src]="movie.cover" alt="">
                     </div>
                     <div class="detail">
-                        <div class="name">{{movie.name}}</div>
+                        <div class="name"  (click)="goToMovie('treding', movie.id)">{{movie.name}}</div>
+                        <div class="rating">{{movie.rating}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theatre-movies">
+            <div class="top">
+                <h4>Popular in Theatres</h4>
+                <div class="view-all">View All</div>
+            </div>
+            <div class="movies-thumbnail">
+                <!--Now we are Biding the movies that from Typescript to html file-->
+                <div class="movie" *ngFor="let movie of theatreMovies">
+                    <div class="cover"  (click)="goToMovie('theatre', movie.id)">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name" (click)="goToMovie('theatre', movie.id)">{{movie.name}}</div>
                         <div class="rating">{{movie.rating}}</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="popular-movies"></div>
+    <div class="popular-movies">
+        <h4>All Time Popular</h4>
+        <div class="movies">
+            <div class="movie" *ngFor="let movie of popularMovies">
+                <div class="detail">
+                    <div class="name" (click)="goToMovie('popular', movie.id)">{{movie.name}}</div>
+                    <div class="rating">{{movie.rating}}</div>
+                </div>
+            </div>
+            <div class="view-all">View All</div>
+        </div>
+    </div>
 </div>

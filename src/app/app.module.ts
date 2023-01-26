@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { MovieComponent } from './movie/movie.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
