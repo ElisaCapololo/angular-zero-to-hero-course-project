@@ -10,6 +10,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 15px;
             h4{
                 text-transform: uppercase;
                 font-weight: bold;
@@ -21,11 +22,58 @@
                 cursor: pointer;
             }
         }
+        .movies-thumbnail{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            .movie{
+                .cover{
+                    img{
+                        border-radius: 5px;
+                    }
+                }
+                .detail{
+                    width: 180px;
+                    .name{
+                        font-weight: bold;
+                        height: 50px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
     }
     .popular-movies{
         width: 25%;
         min-height: calc(100vh - 80px);
         padding: 20px 40px;
         font-family: "Roboto", sans-serif ;
+        h4{
+            text-transform: uppercase;
+            font-weight: bold;
+            border-left: 5px solid #ff9900;
+            padding-left: 10px;
+        }
+        .movies{
+            .movie{
+                margin-bottom: 20px;
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .name{
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+            .view-all{
+                color: #ff9900;
+                text-align: right;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+        }
     }
 }
