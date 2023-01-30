@@ -20,8 +20,8 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     this.type = this.route.snapshot.params['type'];
     this.id = this.route.snapshot.params['id'];
-    if(this.type === 'treding'){
-      this.url = 'http://localhost:4200/assets/data/treding-movies.json';
+    if(this.type === 'trending'){
+      this.url = 'http://localhost:4200/assets/data/trending-movies.json';
       
     }
     if(this.type === 'theatre'){
